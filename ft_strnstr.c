@@ -12,21 +12,39 @@
 #include <stdio.h>
 #include <string.h>
 
- /*char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-}*/
+	size_t	i;
+	size_t	j;
 
-int main()
-{
-   char s1[13] = "Hola a todos";
-   char s2[3] = "la";
-   size_t len;
-
-   len = 4;
-   printf( "s1:      %s\n", s1 );
-   printf( "s2:      %s\n", s2 );
-   printf( "strnstr: %s\n", strnstr( s1, s2, len ));
-
-   return 0;
+	i = 0;
+	if (*needle == '\0' || needle == NULL)
+		return ((char *)haystack);
+	while (haystack[i] != '\0' && i < len)
+	{
+		j = 0;
+		while (needle[j] == haystack[i + j] && i + j < len)
+		{
+			if (needle[j + 1] == '\0')
+				return ((char *)haystack + i);
+			j++;
+		}
+		i++;
+	}
+	return (NULL);
 }
-
+/*int main()
+{
+	char s1[13] = "Hola a todos";
+	char s2[3] = "la";
+	size_t len;
+	char *res;
+	len = 4;
+	printf( "s1:      %s\n", s1 );
+	printf( "s2:      %s\n", s2 );
+	//  printf( "strnstr: %s\n", strnstr( s1, s2, len));
+	printf( "-----------------------------------------\n");
+	res = ft_strnstr(s1, s2, len);
+	printf( "s2:      %s\n", res );
+	return 0;
+}*/
