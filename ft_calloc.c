@@ -6,7 +6,7 @@
 /*   By: xavier <xamas-ga@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:13:19 by xavier            #+#    #+#             */
-/*   Updated: 2023/05/21 19:27:40 by xavier           ###   ########.fr       */
+/*   Updated: 2023/05/21 20:47:39 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    void  *ptr;
-    
-    ptr = malloc(size * nmemb);
-    if (!ptr)
-      return (NULL);
-    ft_bzero(ptr, nmemb * size);
-    return (ptr);  
+	void	*ptr;
+
+	ptr = malloc(size * nmemb);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, nmemb * size);
+	return (ptr);
 }
 
 /*int main()
