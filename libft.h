@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 17:15:03 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/05/21 18:45:05 by xavier           ###   ########.fr       */
+/*   Updated: 2023/05/21 20:34:02 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
 void *ft_calloc(size_t nmemb, size_t size);
+char *ft_strdup(const char *s);
 
 #endif
