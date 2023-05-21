@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 18:02:00 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/05/19 18:47:58 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/05/21 19:07:48 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -15,14 +15,14 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
+	unsigned char *str;
 
 	i = 0;
-	if (!s)
-		return (NULL);
+	str = (unsigned char *)s;
 	while (i < n)
 	{
-		if (*(unsigned char *)(s + i) == (unsigned char)c)
-			return ((void *)(s + i));
+		if (str[i] == (unsigned char)c)
+			return ((void *)&str[i]);
 		i++;
 	}
 	return (NULL);
