@@ -6,7 +6,7 @@
 /*   By: xavier <xamas-ga@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:13:19 by xavier            #+#    #+#             */
-/*   Updated: 2023/05/21 18:59:00 by xavier           ###   ########.fr       */
+/*   Updated: 2023/05/21 19:27:40 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void *ft_calloc(size_t nmemb, size_t size)
 /*int main()
 {
         int num_elements = 18;
-        int element_size = 8;
+        int element_size = sizeof(int);
         int num_elements2 = 18;
-        int element_size2 = 8;
+        int element_size2 = sizeof(int);
         int i;
         int j;
       
