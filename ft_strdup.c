@@ -6,7 +6,7 @@
 /*   By: xavier <xamas-ga@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 19:39:53 by xavier            #+#    #+#             */
-/*   Updated: 2023/05/21 20:38:26 by xavier           ###   ########.fr       */
+/*   Updated: 2023/05/21 21:07:13 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -19,7 +19,7 @@ char *ft_strdup(const char *s)
 {
  char len;
         char *str;
-        int i;
+        int	i;
         
         i = 0;
         len = ft_strlen(s);
