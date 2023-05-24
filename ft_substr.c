@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 18:39:28 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/05/23 21:03:01 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/05/24 08:00:07 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -27,9 +27,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (start + len > slen)
 		len = ft_strlen(s) - start;
-	str = malloc((len + 1) * sizeof(char));
+	str = (char *)malloc((len + 1) * sizeof(char));
 	if (str == NULL)
-		return (ft_strdup(""));
+		return (NULL);
 	while (i < len)
 	{
 		str[i] = s[j];
