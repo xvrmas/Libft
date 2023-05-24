@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 18:39:28 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/05/24 08:00:07 by xavier           ###   ########.fr       */
+/*   Updated: 2023/05/24 19:11:15 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -42,13 +42,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 /*int main()
 {
-	char s[] = "42 Barcelona";
+	char s[] = "0123456789";
 	unsigned int start;
 	size_t len;
 	char *res;
 
-	start = 1;
-	len = 4;
+	start = 5;
+	len = 3;
 	res = ft_substr(s, start, len);
+	printf("String: %s\n", s);
+	printf("Start:  %d\n", start);
+	printf("Len:    %ld\n", len);
+	printf("--------------------------------\n");
 	printf("%s\n", res);
 }*/
