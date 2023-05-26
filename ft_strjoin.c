@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xavier <xamas-ga@student.42.fr>            +#+  +:+       +#+        */
+/*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 18:50:15 by xavier            #+#    #+#             */
-/*   Updated: 2023/05/26 13:00:47 by xavier           ###   ########.fr       */
+/*   Created: 2023/05/26 17:12:51 by xamas-ga          #+#    #+#             */
+/*   Updated: 2023/05/26 17:47:47 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -15,23 +15,19 @@
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
-{i
-        size_t		s1len;
-        size_t		s2len;
-        size_t		total_len;
-        size_t		i;
-        size_t		j;
-	char		*s3;
+{
+	int		i;
+	int		j;
+	int		total_len;
+	char	*s3;
 
 	i = 0;
 	j = 0;
-	s1len = ft_strlen(s1);
-        s2len = ft_strlen(s2);
-        total_len = s1len + s2len;
+	total_len = ft_strlen(s1) + ft_strlen(s2);
 	s3 = malloc((total_len + 1) * sizeof(char));
 	if (s3 == NULL)
 		return (NULL);
-	while (i < s1len)
+	while (i < ft_strlen(s1))
 	{
 		s3[i] = s1[i];
 		i++;
