@@ -6,7 +6,7 @@
 /*   By: xavier <xamas-ga@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 18:50:15 by xavier            #+#    #+#             */
-/*   Updated: 2023/05/24 19:07:24 by xavier           ###   ########.fr       */
+/*   Updated: 2023/05/26 13:00:47 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -15,7 +15,7 @@
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
-{
+{i
         size_t		s1len;
         size_t		s2len;
         size_t		total_len;
@@ -48,10 +48,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 /*int main()
 {
-        char s1[] = "42 Barcelona, ";
-        char s2[] =  " Madrid, Tokyio";
+        char s1[] = "Caminante no hay camino,";
+        char s2[] =  " se hace camino al andar.";
         char *s3;
 
+	printf("s1: %s\n", s1);
+	printf("s2: %s\n", s2);
         s3 = ft_strjoin(s1,s2);
 	printf("s3: %s\n", s3);
-} */
+}*/
