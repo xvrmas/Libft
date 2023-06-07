@@ -1,24 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/08 16:35:35 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/05/30 18:44:12 by xamas-ga         ###   ########.fr       */
+/*   Created: 2023/06/07 15:46:23 by xamas-ga          #+#    #+#             */
+/*   Updated: 2023/06/07 15:54:15 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+#include <unistd.h>
 
-void	ft_bzero(void *s, size_t n)
+void ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((char *)s)[i] = 0;
-		i++;
-	}
+	
 }

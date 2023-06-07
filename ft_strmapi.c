@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 20:27:52 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/05/30 18:42:16 by xamas-ga         ###   ########.fr       */
+/*   Created: 2023/06/07 12:00:16 by xamas-ga          #+#    #+#             */
+/*   Updated: 2023/06/07 14:11:47 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	int		i;
+	int		len;
 	char	*str;
-	size_t	i;
 
 	i = 0;
-	str = b;
-	while (i < n)
+	len = ft_strlen(s);
+	str = malloc(sizeof(char) * len + 1);
+	if (str == NULL)
+		return (NULL);
+	while (s[i] != '\0')
 	{
-		str[i] = (unsigned char)c;
+		str[i] = (*f)(i, s[i]);
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
+
 /*int main()
 {
-	 char str[20] = "42 Barcelona";
-     char str2[20] = "42 Barcelona";
-     //strcpy(str,"This is string.h library function");
-     //puts(str);
-     memset(str,'$',7);
-     ft_memset(str2, '@', 7);
-     printf("memset:   %s\n",str);
-     printf("ft_memset:%s\n",str2);
-     return(0);
+	char s[] = "42 Barcelona";
+	char *str2 = ft_strmapi(s, ft_toupper);
+	printf("%s\n",str2);
+	return (0);
 }*/

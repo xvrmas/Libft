@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 18:17:18 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/05/23 18:22:56 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/05/30 19:39:59 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -36,15 +36,15 @@ char	*ft_strdup(const char *s)
 
 /*int main() {
   
-  char str[] = "Hola 42  Barcelona";
-  //char str2[] = "Hola Barcelona";
+  char str[] = "Barcelona";
+  char str2[] = "Barcelona";
   char *s1;
   char *s2;
 
   s1 = strdup(str);
   printf("strdup: %s\n", s1);
   printf("-------------------------------\n");
-  s2 = ft_strdup(str);
+  s2 = ft_strdup(str2);
   printf("ft_strdup: %s\n", s2);
 
   return 0;
