@@ -6,11 +6,10 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 18:02:00 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/05/23 21:03:26 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/06/08 16:42:37 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

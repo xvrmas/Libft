@@ -6,12 +6,10 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 18:53:33 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/07 21:25:15 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/08 14:23:29 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 static int	count_string(const char *s, char c)
 {
@@ -97,30 +95,13 @@ char	**ft_split(char const *s, char c)
 	return (doarray(s, dst, c, len));
 }
 
-int main(void) {
-    char const *s = "Hola;mundo;!";
-    char c = ';';
+/*int main()
+{
+   char s[] = "split  ||this|for|me|||||!|";
+   char c = '|';
 
-    char **result = ft_split(s, c);
-
-    if (result == NULL) {
-        printf("Error: No se pudo dividir la cadena.\n");
-        return 1;
-    }
-
-    int i = 0;
-    while (result[i] != NULL) {
-        printf("%s\n", result[i]);
-        i++;
-    }
-
-    // Liberar la memoria asignada
-    i = 0;
-    while (result[i] != NULL) {
-        free(result[i]);
-        i++;
-    }
-    free(result);
-
-    return 0;
-}
+   char **res = ft_split(s,c);
+    //ft_split(s,c);
+   if (res != NULL)
+   return 0;
+}*/

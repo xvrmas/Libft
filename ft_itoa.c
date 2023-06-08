@@ -6,11 +6,10 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 15:02:01 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/07 12:35:53 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/06/08 16:43:14 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static	char	*putnumb(int length, int sign, int n)
 {

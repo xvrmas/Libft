@@ -6,11 +6,9 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 18:10:58 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/05/23 18:14:10 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/06/08 16:34:46 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)

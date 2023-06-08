@@ -6,12 +6,10 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 17:18:00 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/05/14 21:08:01 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/06/08 16:23:08 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

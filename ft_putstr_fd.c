@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 18:04:42 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/08 16:43:49 by xamas-ga         ###   ########.fr       */
+/*   Created: 2023/06/08 10:36:51 by xamas-ga          #+#    #+#             */
+/*   Updated: 2023/06/08 14:25:40 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (!(c >= 32 && c <= 126))
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		return (0);
-	}
-	return (1);
+		write (fd, &s[i], 1);
+		i++;
+	}	
 }
+
+/*int main()
+{
+	char s[] = "Hola Barcelona";
+	int fd;
+
+	fd = 1;
+	ft_putstr_fd(s,fd);
+}*/

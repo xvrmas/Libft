@@ -6,19 +6,16 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:12:51 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/05/26 17:47:47 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/06/08 13:56:10 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		j;
-	int		total_len;
+	size_t	i;
+	size_t	j;
+	size_t	total_len;
 	char	*s3;
 
 	i = 0;
