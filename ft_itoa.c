@@ -6,15 +6,14 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 15:02:01 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/08 16:43:14 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/06/09 12:03:55 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static	char	*putnumb(int length, int sign, int n)
+static	char	*putnumb(int length, int sign, int n, int flag)
 {
 	char	*str;
-	int		i;
 	int		num;
 
 	num = n;
@@ -26,17 +25,18 @@ static	char	*putnumb(int length, int sign, int n)
 	str = malloc(sizeof(char) * (length + 1));
 	if (str == NULL)
 		return (NULL);
-	str[length] = '\0';
+	str[length--] = '\0';
 	if (sign == -1)
 		str[0] = '-';
-	i = length - 1;
 	if (n == 0)
-		str[i++] = '0';
+		str[length++] = '0';
 	while (n != 0)
 	{
-		str[i--] = abs(n % 10) + '0';
+		str[length--] = n % 10 + '0';
 		n /= 10;
 	}
+	if (flag == 1)
+		str[10] = '8';
 	return (str);
 }
 
@@ -44,16 +44,23 @@ char	*ft_itoa(int n)
 {
 	int	sign;
 	int	length;
+	int	flag;
 
 	sign = 1;
 	length = 1;
+	flag = 0;
+	if (n == -2147483648)
+	{
+		n -= -1;
+		flag = 1;
+	}
 	if (n < 0)
 	{
 		sign = -1;
 		n *= -1;
 		length++;
 	}
-	return (putnumb(length, sign, n));
+	return (putnumb(length, sign, n, flag));
 }
 
 /*int main()
