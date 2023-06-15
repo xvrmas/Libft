@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 13:58:34 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/08 14:38:01 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/06/14 17:19:58 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -51,5 +51,11 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+typedef struct	s_list
+{
+	void		*content;
+	struct s_list 	*next;
+}			t_list;
+t_list	*ft_lstnew(void *content);
 
 #endif
