@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 18:39:28 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/13 00:07:12 by xavier           ###   ########.fr       */
+/*   Created: 2023/06/13 11:47:43 by xamas-ga          #+#    #+#             */
+/*   Updated: 2023/06/13 12:00:20 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,10 +14,10 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
-	size_t	i;
+	size_t	j;
 	size_t	slen;
 
-	i = 0;
+	j = 0;
 	slen = ft_strlen(s);
 	if (start >= slen)
 		return (ft_strdup(""));
@@ -26,13 +26,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = malloc((len + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	while (i < len)
+	while (j < len)
 	{
-		str[i] = s[start];
-		i++;
+		str[j] = s[start];
 		start++;
+		j++;
 	}
-	str[i] = '\0';
+	str[j] = '\0';
 	return (str);
 }
 
@@ -43,8 +43,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t len;
 	char *res;
 
-	start = 5;
-	len = 7;
+	start = 3;
+	len = 9;
 	res = ft_substr(s, start, len);
 	printf("%s\n", res);
 }*/

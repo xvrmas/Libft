@@ -6,21 +6,10 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 12:00:16 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/12 23:41:03 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/08 18:16:53 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-/*static char ft_toUpper(unsigned int i, char c)
-{
-	if (c >= 'a' && c <= 'z')
-		c = c - 32;
-}
-static char ft_toLower(unsigned int i, char c)
-{
-	if (c >= 'A' && c <= 'Z')
-		c = c + 32;
-}*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -46,11 +35,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 /*int main()
 {
-	char s[] = "42 Paris, 42 Barcelona, 42 Roma, 42 Londres";
-	printf("Original: %s\n", s);
-	char *str2 = ft_strmapi(s, ft_toUpper);
-	printf("toupper:  %s\n",str2);
-	char *str3 = ft_strmapi(str2, ft_toLower);
-	printf("tolower:  %s\n", str3);
+	char s[] = "42 Barcelona";
+	char *str2 = ft_strmapi(s, ft_toupper);
+	printf("%s\n",str2);
 	return (0);
 }*/

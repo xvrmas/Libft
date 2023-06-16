@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 14:15:13 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/12 15:31:31 by xamas-ga         ###   ########.fr       */
+/*   Created: 2023/06/16 09:40:49 by xamas-ga          #+#    #+#             */
+/*   Updated: 2023/06/16 12:23:36 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+t_list	*ft_lstnew(void *content)
 {
-	int	i;
+	t_list	*node;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		(*f)(i, &s[i]);
-		i++;
-	}
+	node = (t_list *)malloc(sizeof(t_list));
+	if (node == NULL)
+		return (NULL);
+	node->content = (void *)content;
+	node->next = NULL;
+	return (node);
 }
 
 /*int main()
 {
-	char s[] = "Barcelona";
-	
-	ft_striteri(s, Toupper);
-	printf("Majuscules: %s", s);
+	char content[] = "hola y adios";
+	t_list *str;
+
+	str = ft_lstnew(content);
+	printf("%s\n", (char *)str->content);
+
 	return (0);
 }*/

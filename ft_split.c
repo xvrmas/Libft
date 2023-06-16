@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 18:53:33 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/08 14:23:29 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/06/16 19:31:14 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,14 +18,19 @@ static int	count_string(const char *s, char c)
 
 	len = 0;
 	key = 0;
-	while (*s != '\0')
+	while (*s)
 	{
-		if (*s == c)
-			key = 0;
-		else if (key == 0)
+		if (*s != c)
 		{
-			key = 1;
-			len++;
+			if(!key)
+			{
+				len++;
+				key = 1;
+			}
+		}
+		else 
+		{
+			key = 0;
 		}
 		s++;
 	}
@@ -47,11 +52,8 @@ static int	lenarray(char const *s, char c, int i)
 
 static char	**getfree(char const **dest, int j)
 {
-	while (j > 0)
-	{
-		j--;
+	while (j-- > 0)
 		free((void *)dest[j]);
-	}
 	free(dest);
 	return (NULL);
 }
@@ -97,11 +99,22 @@ char	**ft_split(char const *s, char c)
 
 /*int main()
 {
-   char s[] = "split  ||this|for|me|||||!|";
-   char c = '|';
+   char s[] = "Hol,a, y ,,,,,a,,,d,,,,,i,,,,,os,,,.";
+    char c;
+    char **dest;
+    int i;
 
-   char **res = ft_split(s,c);
-    //ft_split(s,c);
-   if (res != NULL)
-   return 0;
+    i = 0;
+    c = ',';
+	printf("string original: %s\n", s);
+	printf("separador:  %c\n", c);
+    dest = ft_split(s,c);
+	printf("spliteado: ");
+    while (dest[i] != NULL)
+    {
+      printf("%s", dest[i]);
+      i++;
+    }
+	printf("\n");
+    return (0);
 }*/
