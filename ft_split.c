@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 18:53:33 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/16 19:31:14 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/17 17:50:22 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -22,7 +22,7 @@ static int	count_string(const char *s, char c)
 	{
 		if (*s != c)
 		{
-			if(!key)
+			if(key == 0)
 			{
 				len++;
 				key = 1;
@@ -36,76 +36,71 @@ static int	count_string(const char *s, char c)
 	}
 	return (len);
 }
-
-static int	lenarray(char const *s, char c, int i)
+static char **free_str(const char **str, int point)
 {
-	int	lenarr;
-
-	lenarr = 0;
-	while (s[i] != c && s[i] != '\0')
-	{
-		lenarr++;
-		i++;
-	}
-	return (lenarr);
-}
-
-static char	**getfree(char const **dest, int j)
-{
-	while (j-- > 0)
-		free((void *)dest[j]);
-	free(dest);
+	while (point-- > 0)
+		free((void *)str[point]);
+	free(str);
 	return (NULL);
 }
-
-static char	**doarray(char const *s, char **dest, char c, int l)
+static char **put_sub_arr(const char *s, char c, char **str, int len)
 {
-	int	i;
-	int	j;
-	int	k;
+	int	start;
+	int	longth;
+	int	point;
+	int 	temp;
+	int	len_arr;
 
-	i = 0;
-	j = 0;
-	while (s[i] != '\0' && j < l)
+	start = 0;
+	point = 0;
+	longth = 0;
+	len_arr = 0;
+	while (s[start] != '\0' && point < len)
 	{
-		k = 0;
-		while (s[i] == c)
-			i++;
-		dest[j] = (char *)malloc(sizeof(char) * lenarray(s, c, i) + 1);
-		if (dest[j] == NULL)
-			return (getfree((char const **)dest, j));
-		while (s[i] != '\0' && s[i] != c)
-			dest[j][k++] = s[i++];
-		dest[j][k] = '\0';
-		j++;
+		longth = 0;
+		while (s[start] == c)
+			start++;
+		temp = start;
+		while (s[temp] != c && s[temp] != '\0')
+		{
+			len_arr++;
+			temp++;
+		}
+		str[point] = (char *)malloc(sizeof(char) * len_arr + 1);
+		if (str[point] == NULL)
+			return (free_str((char const **)str, point));
+		while (s[start] != c && s[start] != '\0')
+			str[point][longth++] = s[start++];
+		str[point][longth] = '\0';
+		point++;
+		len_arr = 0;
 	}
-	dest[j] = 0;
-	return (dest);
+	str[point] = 0;
+	return (str);		
 }
 
-char	**ft_split(char const *s, char c)
+char **ft_split(char const *s, char c)
 {
-	char	**dst;
-	int		len;
-
-	if (s == NULL)
+	int len;
+	char **str;
+		
+	len = count_string(s,c);
+	str = (char **)malloc(sizeof(char *) * (len + 1));
+	if (str == NULL)
 		return (NULL);
-	len = count_string(s, c);
-	dst = (char **)malloc(sizeof(char *) * (len + 1));
-	if (dst == NULL)
-		return (NULL);
-	return (doarray(s, dst, c, len));
+	str = put_sub_arr(s,c,str,len);
+	return (str);
 }
 
 /*int main()
 {
-   char s[] = "Hol,a, y ,,,,,a,,,d,,,,,i,,,,,os,,,.";
+   char s[] = "Ple||ase,||| spl|||i|t|| m|e|||.";
     char c;
     char **dest;
     int i;
 
     i = 0;
-    c = ',';
+    c = '|';
 	printf("string original: %s\n", s);
 	printf("separador:  %c\n", c);
     dest = ft_split(s,c);
