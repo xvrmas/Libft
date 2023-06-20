@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 09:40:49 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/20 11:15:28 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/20 11:53:52 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -22,7 +22,7 @@ t_list	*ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
-int main()
+/*int main()
 {
 
         t_list *node1 = ft_lstnew("festucs");
@@ -50,4 +50,4 @@ int main()
         }
         printf("\n");
         return (0);
-}
+}*/
