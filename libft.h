@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 13:58:34 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/15 09:20:11 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/06/20 13:53:59 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -58,5 +58,8 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+int			ft_lstsize(t_list *lst);
+t_list			*ft_lstlast(t_list *lst);
 
 #endif
