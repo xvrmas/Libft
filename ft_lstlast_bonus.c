@@ -6,13 +6,15 @@
 /*   By: xavier <xamas-ga@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 12:00:32 by xavier            #+#    #+#             */
-/*   Updated: 2023/06/20 13:59:06 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/20 18:04:36 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
-{
+t_list	*ft_lstlast(t_list *lst)
+{	
+	if (lst == NULL)
+		return (NULL);
 	while (lst->next != NULL)
 	{
 		lst = lst->next;
@@ -57,4 +59,3 @@ t_list *ft_lstlast(t_list *lst)
 	}
 	return (0);
 }*/
-
