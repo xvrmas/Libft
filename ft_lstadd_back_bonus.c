@@ -6,17 +6,27 @@
 /*   By: xavier <xamas-ga@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 14:09:24 by xavier            #+#    #+#             */
-/*   Updated: 2023/06/20 14:34:35 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/22 12:26:57 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {	
-	
+	t_list	*last;
+
+	if (lst == NULL || new == NULL)
+		return ;
+	if (*lst == NULL)
+		*lst = new;
+	else
+	{
+		last = ft_lstlast(*lst);
+		last->next = new;
+	}	
 }
 
-int main()
+/*int main()
 {
 	t_list *list = NULL;
 	int j;		
@@ -44,7 +54,9 @@ int main()
 	list = node1;
 	t_list *node10 = ft_lstnew("nuevo");
 	j = ft_lstsize(list);
-	printf("Ahora hay %d  nodos en la lista.", j);
-	ft_lstadd_back(lst, node10);
+	printf("Ahora hay %d  nodos en la lista", j);
+	ft_lstadd_back(&list, node10);
+	j = ft_lstsize(list);
+	printf(" y ahora hay %d nodos", j);
 	
-}
+}*/

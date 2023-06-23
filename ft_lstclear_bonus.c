@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: xavier <xamas-ga@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/08 19:02:02 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/23 12:59:40 by xavier           ###   ########.fr       */
+/*   Created: 2023/06/22 13:03:13 by xavier            #+#    #+#             */
+/*   Updated: 2023/06/22 13:10:57 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_toupper(int c)
+void ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (c >= 'a' && c <= 'z')
-		c = c - 32;
-	return (c);
-}
+	t_list *head;
+	t_list *next;
 
-/*int main()
-{
-	char s[] = "ante todo mucha calma";
-	int i;
-
-	i = 0;
-	printf("%s\n", s);
-	while (s[i] != '\0')
+	if (lst)
 	{
-		printf("%c", ft_toupper(s[i]));
-		i++;
+		head = *lst;
+		while (head)
+		{
+			next = head->next;
+			ft_lstdelone(head, (del));
+			head = next;
+		}
+		*lst = NULL;
 	}
-	printf("\n");
-}*/
+}

@@ -6,12 +6,12 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 11:48:19 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/20 16:57:29 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/23 19:32:23 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
 	*lst = new;
@@ -74,4 +74,3 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 
 	return 0;
 }*/
-
