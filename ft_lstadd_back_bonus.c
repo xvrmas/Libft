@@ -3,34 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xavier <xamas-ga@student.42.fr>            +#+  +:+       +#+        */
+/*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/20 14:09:24 by xavier            #+#    #+#             */
-/*   Updated: 2023/06/22 12:26:57 by xavier           ###   ########.fr       */
+/*   Created: 2023/06/21 12:58:01 by xamas-ga          #+#    #+#             */
+/*   Updated: 2023/06/26 16:59:12 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
-{	
-	t_list	*last;
+{
+	t_list	*str;
 
 	if (lst == NULL || new == NULL)
 		return ;
 	if (*lst == NULL)
+	{
 		*lst = new;
+	}
 	else
 	{
-		last = ft_lstlast(*lst);
-		last->next = new;
-	}	
+		str = ft_lstlast(*lst);
+		str->next = new;
+	}
 }
 
 /*int main()
 {
 	t_list *list = NULL;
 	int j;		
-
+	t_list *last_node;
+	
 	t_list *node1 = ft_lstnew("primero");
 	t_list *node2 = ft_lstnew("segundo");
 	t_list *node3 = ft_lstnew("tercero");
@@ -52,11 +55,18 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	node9->next = NULL;
 
 	list = node1;
-	t_list *node10 = ft_lstnew("nuevo");
+	t_list *node10 = ft_lstnew("el decimo");
 	j = ft_lstsize(list);
-	printf("Ahora hay %d  nodos en la lista", j);
+	printf("Hay %d nodos en la lista.", j);
+	printf("\n");
+
 	ft_lstadd_back(&list, node10);
 	j = ft_lstsize(list);
-	printf(" y ahora hay %d nodos", j);
+	printf("Ahora hay %d nodos ", j);
+	last_node = ft_lstlast(list);
+		if (last_node != NULL)
+	{
+		printf("y el nuevo nodo es: %s\n.", (char *)last_node->content);
+	}
 	
 }*/

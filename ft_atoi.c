@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 13:22:28 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/08 16:26:37 by xamas-ga         ###   ########.fr       */
+/*   Updated: 2023/06/19 14:08:03 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,12 +14,12 @@
 int	ft_atoi(const char *str)
 {
 	int	i;
-	int	resultat;
+	int	resul;
 	int	sign;
 	int	cont;
 
 	i = 0;
-	resultat = 0;
+	resul = 0;
 	sign = 1;
 	cont = 0;
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
@@ -34,10 +34,10 @@ int	ft_atoi(const char *str)
 	}
 	while (cont <= 1 && str[i] >= '0' && str[i] <= '9')
 	{			
-		resultat = resultat * 10 + str[i] - '0';
+		resul = resul * 10 + str[i] - '0';
 		i++;
 	}
-	return (sign * resultat);
+	return (sign * resul);
 }
 
 /*int main()

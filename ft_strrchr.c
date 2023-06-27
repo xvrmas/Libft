@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 20:26:58 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/20 17:33:36 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/08 13:38:47 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -30,7 +30,7 @@ char	*ft_strrchr(const char *str, int c)
 /*int main()
 {
     char c1[] = "abbbbbbbb";
-    char c = 'b';
+    char c = 'a';
     printf("ft_strch: %s\n",ft_strrchr(c1, c));
     printf("strch: %s\n", strrchr(c1, c));
 }*/

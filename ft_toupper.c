@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 19:02:02 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/27 10:16:03 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/27 18:14:09 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,7 +17,6 @@ int	ft_toupper(int c)
 		c = c - 32;
 	return (c);
 }
-
 /*void ft_separe(char *s)
 {
 	int j;
