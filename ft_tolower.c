@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 19:17:51 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/23 13:05:57 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/27 10:02:07 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,17 +18,31 @@ int	ft_tolower(int c)
 	return (c);
 }
 
-/*int main()
+/*char ft_separe(char *s)
+{
+	int j;
+	int len;
+
+	j = 0;
+	len = ft_strlen(s);
+	while (j < len)
+	{
+		s[j] = ft_tolower(s[j]);
+		j++;
+	}
+	printf("%s", s);
+	printf(" ");
+}
+
+int main(int argv, char *argc[])
 {	
-	char s[] = "ANTE TODO MUCHA calma.";
 	int i;
 
-	i = 0;
-	printf("%s\n", s);
-	while (s[i] != '\0')
+	i = 1;
+	while (i < argv)
 	{
-		printf("%c", ft_tolower(s[i]));
+		ft_separe(argc[i]);
 		i++;
 	}
-	printf("\n");	
+	printf("\n");
 }*/

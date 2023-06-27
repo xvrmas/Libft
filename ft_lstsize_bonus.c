@@ -6,14 +6,14 @@
 /*   By: xavier <xamas-ga@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 11:28:17 by xavier            #+#    #+#             */
-/*   Updated: 2023/06/20 17:20:39 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/24 12:54:54 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int cont;
+	int	cont;
 
 	cont = 0;
 	while (lst != NULL)

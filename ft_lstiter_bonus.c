@@ -6,12 +6,12 @@
 /*   By: xavier <xamas-ga@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 13:14:35 by xavier            #+#    #+#             */
-/*   Updated: 2023/06/22 13:16:54 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/24 12:51:18 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst)
 	{
@@ -19,4 +19,3 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}	
 }
-

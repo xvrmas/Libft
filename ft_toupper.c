@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 19:02:02 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/23 12:59:40 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/27 10:16:03 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,16 +18,30 @@ int	ft_toupper(int c)
 	return (c);
 }
 
-/*int main()
+/*void ft_separe(char *s)
 {
-	char s[] = "ante todo mucha calma";
+	int j;
+	int len;
+
+	j = 0;
+	len = ft_strlen(s);
+	while (j < len)
+	{
+		s[j] = ft_toupper(s[j]);
+		j++;
+	}
+	printf("%s", s);
+	printf(" ");
+}
+int main(int argv, char *argc[])
+{
+
 	int i;
 
-	i = 0;
-	printf("%s\n", s);
-	while (s[i] != '\0')
+	i = 1;
+	while (i < argv)
 	{
-		printf("%c", ft_toupper(s[i]));
+		ft_separe(argc[i]);
 		i++;
 	}
 	printf("\n");

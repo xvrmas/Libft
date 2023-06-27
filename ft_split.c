@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 18:53:33 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/23 19:49:26 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/24 13:09:11 by xavier           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -41,8 +41,8 @@ static int	count_string(const char *s, char c)
 
 static int	count_arr(const char *s, char c, int start, int flag)
 {
-	int len_arr;
-	
+	int	len_arr;
+
 	len_arr = 0;
 	if (flag == 0)
 	{
@@ -71,13 +71,13 @@ static char	**free_str(const char **str, int point)
 
 static char	**put_sub_arr(const char *s, char c, char **str, int len)
 {
-	int     start;
-        int     longth;
-        int     point;
-        int     flag;
-	int	len_arr;	
-
-        start = 0;
+	int	start;
+	int	longth;
+	int	point;
+	int	flag;
+	int	len_arr;
+	
+	start = 0;
         point = 0;
         longth = 0;
         while (s[start] != '\0' && point < len)
