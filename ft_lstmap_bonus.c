@@ -6,7 +6,7 @@
 /*   By: xamas-ga <xamas-ga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 12:57:50 by xamas-ga          #+#    #+#             */
-/*   Updated: 2023/06/27 20:25:11 by xavier           ###   ########.fr       */
+/*   Updated: 2023/06/28 13:02:16 by xamas-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,18 +14,22 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*head;
-	t_list	*temp;
+	t_list	*new;
+	t_list	*aux;
 
 	head = NULL;
-	while (lst)
+	while (lst != NULL)
 	{
-		temp = ft_lstnew((*f)(lst->content));
-		if (!temp)
+		aux = f(lst->content);
+		new = ft_lstnew(aux);
+		if (new == NULL)
 		{
 			ft_lstclear(&head, del);
+			free(head);
+			free(aux);
 			return (NULL);
 		}
-		ft_lstadd_back(&head, temp);
+		ft_lstadd_back(&head, new);
 		lst = lst->next;
 	}
 	return (head);
